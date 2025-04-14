@@ -11,7 +11,6 @@ export const POST = async (req:NextRequest)=>{
             message: "user created",
             status: 200,
             data: getD
-
         })
     } catch (error:any) {
         return NextResponse.json({
