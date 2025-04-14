@@ -12,7 +12,7 @@ const Signup = () => {
         setCheck(true)
         const username = formData.get("username")
         const name = formData.get("name")
-        const url = 'http://localhost:3000/api/user'
+        const url = 'https://permes-uutn.vercel.app/api/user'
         setTimeout(async()=>{
             await fetch(url, {method: "POST", body: JSON.stringify({username, name})}).then(()=>{console.log("done"), setCheck(false)})
           
