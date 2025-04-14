@@ -41,7 +41,7 @@ const Referral = () => {
       </div>
       <div className="border border-neutral-400 w-full"></div>
 
-      <div className="flex flex-col items-center w-full h-[100vh]">
+      <div className="flex flex-col items-center w-full">
         <div className=" flex flex-col items-center gap-9 p-5 md:p-2 pt-[20px] border-neutral-600 w-[340px]  md:w-[500px] min-h-[200px] rounded-md">
           <p>Your Current Balance</p>
           <p className="flex items-center text-[20px] font-semibold">
