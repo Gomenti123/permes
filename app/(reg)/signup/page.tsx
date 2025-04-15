@@ -6,9 +6,13 @@ import { log } from "console";
 import Spinner from "@/app/utils/spinner";
 import { redirect } from "next/navigation";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+// import { increase } from "@/app/global/slice";
+import { signUser } from "@/app/global/slice";
 
 const Signup = () => {
   const [check, setCheck] = useState(false);
+  const dispatch = useDispatch();
   const submited = async (formData: FormData) => {
     setCheck(true);
     const username = formData.get("username");
@@ -25,10 +29,14 @@ const Signup = () => {
       await axios.post(url, { name, username }).then((res: any) => {
         const userId = res.data.data._id;
         setCheck(false);
+        dispatch(signUser(res.data.data));
         redirect(`/referral/${userId}`);
       });
     }, 2000);
   };
+
+  // dispatch(increase(false));
+
   return (
     <div>
       <div className="flex justify-center items-center w-full h-[100vh] ">

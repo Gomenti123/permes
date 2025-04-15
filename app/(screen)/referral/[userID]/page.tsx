@@ -1,35 +1,33 @@
 "use client";
+import { signUser } from "@/app/global/slice";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { useDispatch, useSelector } from "react-redux";
 
 const Referral = () => {
   const tt = useParams();
-  //   interface User {
-  //     amount: number;
-  //     createdAt: string;
-  //     name: string;
-  //     updatedAt: string;
-  //     username: string;
-  //     __v: number;
-  //     _id: string;
-  //   }
+
+  const users = useSelector((state: any) => state.user);
+  const dispatch = useDispatch();
+
+  // console.log(users._id);
+
   const [user, setUser]: any = useState({});
-  //   console.log(tt);
+
   const getUser = async () => {
     const url = "https://permes-uutn.vercel.app/api/user";
+    const surl = "http://localhost:3000/api/user";
+
     await axios.get(`${url}/${tt.userID}`).then((res: any) => {
-      setUser(res.data.data);
+      dispatch(signUser(res.data.data));
       // console.log(res);
     });
   };
   useEffect(() => {
     getUser();
   }, [1]);
-  const amount = 1000;
-
-  //   console.log(user);
 
   return (
     <div className="pt-3 md:pt-10 flex flex-col gap-3">
@@ -38,10 +36,10 @@ const Referral = () => {
           <p>Your Current Balance</p>
           <p className="flex items-center text-[20px] font-semibold">
             <TbCurrencyNaira className="text-[25px]" />
-            {user.amount}
+            {users.amount}
           </p>
           <div className="flex flex-col gap-1">
-            {user.amount > 200 ? (
+            {users.amount > 200 ? (
               <button className="p-3 bg-yellow-700 text-white text-[15px] w-full rounded-full">
                 Request Withdrawal
               </button>
