@@ -26,7 +26,7 @@ const Referral = () => {
   useEffect(() => {
     getUser();
   }, [1]);
-  console.log(users);
+  // console.log(users);
   const text = "Hello i'd like to book a session";
 
   return users !== null ? (
