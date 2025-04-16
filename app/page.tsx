@@ -14,16 +14,16 @@ const page = () => {
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
       <div className="w-full">
         <div
-          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[250px] md:h-[500px]`}
+          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[350px] md:h-[500px]`}
         >
           <div className={`bg-[${img2}]`}>
             {/* <Image src={img2} alt="#" width={100} height={100} />
              */}
           </div>
         </div>
-        <div className="bg-[#113972c9] grid grid-cols-2 px-[10px] md:px-20 md:py-20 w-full min-h-[250px] md:h-[500px] relative">
-          <div className="col-span-2 md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px]">
-            <h1 className="font-semibold text-[30px] md:text-[50px] md:leading-[60px] text-white">
+        <div className="bg-[#113972c9] grid grid-cols-3 px-[10px] md:px-20 md:py-20 w-full min-h-[350px] md:h-[500px] relative">
+          <div className="col-span-2 md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px] flex flex-col gap-3">
+            <h1 className="font-semibold text-[40px] md:text-[50px] leading-[45px] md:leading-[60px] text-white">
               The Easiest and Cheapest way to do your laundry and dry cleaning.
             </h1>
             <p className="text-white font-semibold text-[12px] md:text-[17px] md:leading-[30px]">
