@@ -27,6 +27,7 @@ const Referral = () => {
     getUser();
   }, [1]);
   console.log(users);
+  const text = "Hello i'd like to book a session";
 
   return users !== null ? (
     <div className="pt-3 md:pt-10 flex flex-col gap-3">
@@ -40,7 +41,9 @@ const Referral = () => {
           <div className="flex flex-col gap-1">
             {users.amount > 200 ? (
               <button className="p-3 bg-yellow-700 text-white text-[15px] w-full rounded-full">
-                Request Withdrawal
+                <a href={`https://wa.me/2349045190274?text=${text}`}>
+                  Request Withdrawal
+                </a>
               </button>
             ) : (
               <button
