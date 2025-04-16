@@ -18,7 +18,7 @@ const Signup = () => {
     const username = formData.get("username");
     const name = formData.get("name");
     const url =
-      "https://permes-uutn.vercel.app/api/admin/67ff6c0239720782d21dd37b";
+      "https://permes-uutn.vercel.app/api/user/register/67ff6c0239720782d21dd37b";
     setTimeout(async () => {
       // await fetch(url, {
       //   method: "POST",
