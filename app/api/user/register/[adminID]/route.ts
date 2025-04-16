@@ -22,7 +22,6 @@ export const POST = async (req:NextRequest, {params}:any)=>{
             return NextResponse.json({
                 message: "Error Occured",
                 status: 400,
-                
             })
         }
        
