@@ -3,9 +3,10 @@ import { BsWhatsapp } from "react-icons/bs";
 import { WhatsappShareButton } from "react-share";
 
 const page = () => {
-  const text = "Hello, i'll like to book for pick up";
+  const text =
+    "Hello, i just visited Permes Laundry web page, and would like to subscribe for a service";
   return (
-    <div>
+    <div className="md:mt-[85px] mt-[75px]  h-[200vh]">
       This is the main page
       <div className="fixed bottom-10 right-5 animate-bounce">
         <a
