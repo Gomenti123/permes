@@ -44,7 +44,7 @@ const page = () => {
 
       <div className="w-full">
         <div
-          className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] h-[800px] md:min-h-[400px]`}
+          className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] min-h-[900px] md:min-h-[400px]`}
         ></div>
         <div className="relative w-full p-5 md:p-10 ">
           <div>
@@ -92,7 +92,7 @@ const page = () => {
 
       <div className="flex flex-col gap-10 md:pt-0">
         <div className="flex flex-col items-center gap-2 px-10 md:px-0">
-          <h1 className="text-[40px] md:text-[50px] text-neutral-700 font-medium font-sans">
+          <h1 className="text-[45px] md:text-[50px] text-neutral-700 font-semibold md:font-medium font-sans">
             Testimonials
           </h1>
           <p className="text-neutral-500 font-sans text-[18px] md:text-[20px] text-center">
@@ -104,7 +104,7 @@ const page = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-[13px] md:p-0">
-          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+          <div className="col-span-1 bg-[#1c6076] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
             <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
@@ -122,7 +122,7 @@ const page = () => {
               <div>This is the star</div>
             </div>
           </div>
-          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+          <div className="col-span-1 bg-[#9bdde1] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
             <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
@@ -140,7 +140,7 @@ const page = () => {
               <div>This is the star</div>
             </div>
           </div>
-          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+          <div className="col-span-1 bg-[#FECF69] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
             <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
@@ -158,7 +158,7 @@ const page = () => {
               <div>This is the star</div>
             </div>
           </div>
-          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+          <div className="col-span-1 bg-[#f5a504] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
             <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
