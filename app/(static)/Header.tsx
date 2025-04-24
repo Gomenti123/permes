@@ -5,9 +5,15 @@ import img from "../../public/logo2.png";
 import { VscThreeBars } from "react-icons/vsc";
 import Toogle from "./Toogle";
 import { MdCancel } from "react-icons/md";
+import { Link } from "react-scroll";
+import { useDispatch, useSelector } from "react-redux";
+import { toggle } from "../global/slice";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  //   const [toggle, setToggle] = useState(false);
+  const toggler = useSelector((state: any) => state.toggle);
+  const dispatch = useDispatch();
+  //   console.log(toggler);
   return (
     <div>
       <div className="fixed top-0 w-full md:h-[80px] bg-white z-10 shadow shadow-gray-400">
@@ -16,22 +22,43 @@ const Header = () => {
             <Image src={img} alt="#" className="w-[120px] md:w-[200px]" />
           </div>
           <div className="md:flex justify-between text-[14px] lg:text-[17px] gap-[30px] col-span-4 lg:col-span-3 hidden ">
-            <nav className="cursor-pointer font-semibold">How This Works</nav>
-            <nav className="cursor-pointer font-semibold">About Us</nav>
-            <nav className="cursor-pointer font-semibold">Testimonials</nav>
+            <Link
+              to="howthisworks"
+              smooth={true}
+              duration={700}
+              className="cursor-pointer font-semibold"
+            >
+              How This Works
+            </Link>
+            <Link
+              to="howthisworks"
+              smooth={true}
+              duration={700}
+              className="cursor-pointer font-semibold"
+            >
+              About Us
+            </Link>
+            <Link
+              to="testimonials"
+              smooth={true}
+              duration={700}
+              className="cursor-pointer font-semibold"
+            >
+              Testimonials
+            </Link>
           </div>
           <div className="block md:hidden">
-            {toggle ? (
+            {toggler ? (
               <MdCancel
                 onClick={() => {
-                  setToggle(false);
+                  dispatch(toggle(false));
                 }}
                 className="text-[30px] text-neutral-700"
               />
             ) : (
               <VscThreeBars
                 onClick={() => {
-                  setToggle(true);
+                  dispatch(toggle(true));
                 }}
                 className="text-[30px] text-neutral-700"
               />
@@ -39,7 +66,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {toggle ? <Toogle /> : ""}
+      {toggler ? <Toogle /> : ""}
     </div>
   );
 };

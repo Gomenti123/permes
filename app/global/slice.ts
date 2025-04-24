@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user:{}
+  user:{},
+  toggle: true
 };
 
 const slice = createSlice({
@@ -9,10 +10,13 @@ const slice = createSlice({
   initialState,
   reducers: {
    signUser: (state, {payload})=>{state.user = payload;
+   },
+   toggle: (state, {payload}) => {
+    state.toggle = payload
    }
   },
 });
 
-export const {signUser } = slice.actions;
+export const {signUser, toggle } = slice.actions;
 
 export default slice.reducer;

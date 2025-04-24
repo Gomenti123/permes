@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { WhatsappShareButton } from "react-share";
@@ -10,13 +11,14 @@ import laundry from "../../../public/laundry.svg";
 import { GrSchedule } from "react-icons/gr";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import Footer from "@/app/(static)/Footer";
+import { Element } from "react-scroll";
 
 const page = () => {
   const text =
     "Hello, i just visited Permes Laundry web page, and would like to subscribe for a service";
   return (
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
-      <div className="w-full">
+      <Element name="howthisworks" className="w-full">
         <div
           className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[350px] md:h-[500px]`}
         >
@@ -40,9 +42,9 @@ const page = () => {
             <Image src={img} alt="#" width={480} height={400} />
           </div>
         </div>
-      </div>
+      </Element>
 
-      <div className="w-full">
+      <section id="#howitworks" className="w-full">
         <div
           className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] min-h-[900px] md:min-h-[400px]`}
         ></div>
@@ -88,9 +90,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col gap-10 md:pt-0">
+      <Element name="testimonials" className="flex flex-col gap-10 md:pt-0">
         <div className="flex flex-col items-center gap-2 px-10 md:px-0">
           <h1 className="text-[45px] md:text-[50px] text-neutral-700 font-semibold md:font-medium font-sans">
             Testimonials
@@ -177,7 +179,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Element>
 
       <div>
         <Footer />
