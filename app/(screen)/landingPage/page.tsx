@@ -44,9 +44,9 @@ const page = () => {
 
       <div className="w-full">
         <div
-          className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] min-h-[970px] md:min-h-[400px]`}
+          className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] h-[800px] md:min-h-[400px]`}
         ></div>
-        <div className="relative w-full p-10 ">
+        <div className="relative w-full p-5 md:p-10 ">
           <div>
             <h1 className="font-semibold text-center flex justify-center text-[25px] md:text-[40px] text-neutral-600 leading-[40px] md:leading-[50px]">
               How our Laundry and Dry <br /> cleaning Delivery service Works.
@@ -90,8 +90,8 @@ const page = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 pt-[40px] md:pt-0">
-        <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col gap-10 md:pt-0">
+        <div className="flex flex-col items-center gap-2 px-10 md:px-0">
           <h1 className="text-[40px] md:text-[50px] text-neutral-700 font-medium font-sans">
             Testimonials
           </h1>
@@ -103,7 +103,7 @@ const page = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-[5px] md:p-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-[13px] md:p-0">
           <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
             <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
               This has been exactly 5 years, and although my initial motivation
