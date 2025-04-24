@@ -4,8 +4,12 @@ import { WhatsappShareButton } from "react-share";
 import img from "../../../public/hero.png";
 import Image from "next/image";
 import img2 from "../../../public/hero2.png";
+import calendar from "../../../public/calendar.svg";
+import relax from "../../../public/relax.svg";
+import laundry from "../../../public/laundry.svg";
 import { GrSchedule } from "react-icons/gr";
 import { RiCalendarScheduleLine } from "react-icons/ri";
+import Footer from "@/app/(static)/Footer";
 
 const page = () => {
   const text =
@@ -40,27 +44,143 @@ const page = () => {
 
       <div className="w-full">
         <div
-          className={`bg-[url("../public/background.jpeg")] absolute bg-cover bg-repeat w-full min-h-[300px] md:h-[500px]`}
+          className={`bg-[url("../public/background.jpeg")] absolute bg-repeat w-[100%] min-h-[970px] md:min-h-[400px]`}
         ></div>
-        <div className="relative flex flex-col items-center px-10 gap-10 py-5">
-          <h1 className="font-semibold text-center text-[30px] text-neutral-600 leading-[35px]">
-            How our Laundry and Dry cleaning Delivery service Works.
-          </h1>
-          <div className="flex gap-2 justify-center items-center">
-            <div className="flex flex-col  items-center">
-              <RiCalendarScheduleLine className="text-[50px] font-light" />
-              <p>Pick your clothes</p>
+        <div className="relative w-full p-10 ">
+          <div>
+            <h1 className="font-semibold text-center flex justify-center text-[25px] md:text-[40px] text-neutral-600 leading-[40px] md:leading-[50px]">
+              How our Laundry and Dry <br /> cleaning Delivery service Works.
+            </h1>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between p-10 gap-10">
+            <div className="flex flex-col items-center gap-2 ">
+              <Image src={calendar} alt="#" width={70} height={70} />
+
+              <p className="font-medium font-sans text-[20px]">
+                Pick your clothes
+              </p>
+              <p className="text-center text-neutral-500">
+                After subscribing, choose the day and time you want your pickup
+                to begin.
+              </p>
             </div>
-            <div className="flex flex-col  items-center">
-              <RiCalendarScheduleLine className="text-[50px] font-light" />
-              <p>Pick your clothes</p>
+            <div className="flex flex-col  items-center gap-2">
+              <Image src={laundry} alt="#" width={70} height={70} />
+              <p className="font-medium font-sans text-[20px]">
+                Laundry & Dry Clean
+              </p>
+              <p className="text-center text-neutral-500">
+                A specific pickup specialist arrives at your home to collect
+                your dirty items, analyze them and head to the factory for dry
+                cleaning process
+              </p>
             </div>
-            <div className="flex flex-col  items-center">
-              <RiCalendarScheduleLine className="text-[50px] font-light" />
-              <p>Pick your clothes</p>
+            <div className="flex flex-col items-center gap-2">
+              <Image src={relax} alt="#" width={70} height={70} />
+              <p className="font-medium font-sans text-[20px]">
+                Relax, We Deliver
+              </p>
+              <p className="text-center text-neutral-500">
+                chair back Enjoy your week and relax; you will receive sparkling
+                clothing within 5 days.
+              </p>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col gap-10 pt-[40px] md:pt-0">
+        <div className="flex flex-col items-center gap-2">
+          <h1 className="text-[40px] md:text-[50px] text-neutral-700 font-medium font-sans">
+            Testimonials
+          </h1>
+          <p className="text-neutral-500 font-sans text-[18px] md:text-[20px] text-center">
+            Offering innovative solutions is our passion. We endeavor to attain
+            a high ..
+            <br /> customer satisfaction in our field and want to exceed your
+            expectations
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-[5px] md:p-0">
+          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+              This has been exactly 5 years, and although my initial motivation
+              for subscribing was to see if the service was worthwhile, I don't
+              think I'll be canceling anytime soon. I'm dependent on it like a
+              drug..
+            </p>
+            <div className="row-span-1 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
+                <div>
+                  <p>This is the text field</p>
+                  <p>this is the small text field</p>
+                </div>
+              </div>
+              <div>This is the star</div>
+            </div>
+          </div>
+          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+              This has been exactly 5 years, and although my initial motivation
+              for subscribing was to see if the service was worthwhile, I don't
+              think I'll be canceling anytime soon. I'm dependent on it like a
+              drug..
+            </p>
+            <div className="row-span-1 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
+                <div>
+                  <p>This is the text field</p>
+                  <p>this is the small text field</p>
+                </div>
+              </div>
+              <div>This is the star</div>
+            </div>
+          </div>
+          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+              This has been exactly 5 years, and although my initial motivation
+              for subscribing was to see if the service was worthwhile, I don't
+              think I'll be canceling anytime soon. I'm dependent on it like a
+              drug..
+            </p>
+            <div className="row-span-1 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
+                <div>
+                  <p>This is the text field</p>
+                  <p>this is the small text field</p>
+                </div>
+              </div>
+              <div>This is the star</div>
+            </div>
+          </div>
+          <div className="col-span-1 bg-red-300 w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+              This has been exactly 5 years, and although my initial motivation
+              for subscribing was to see if the service was worthwhile, I don't
+              think I'll be canceling anytime soon. I'm dependent on it like a
+              drug..
+            </p>
+            <div className="row-span-1 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
+                <div>
+                  <p>This is the text field</p>
+                  <p>this is the small text field</p>
+                </div>
+              </div>
+              <div>This is the star</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <Footer />
       </div>
 
       <div className="fixed bottom-10 right-5 animate-bounce">
