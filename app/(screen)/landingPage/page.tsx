@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { WhatsappShareButton } from "react-share";
 import img from "../../../public/hero.png";
@@ -16,10 +16,16 @@ import { useSelector } from "react-redux";
 import { redirect } from "next/navigation";
 
 const page = () => {
+  const [userId, setUserId]: any = useState("");
   const text =
-    "Hello, i just visited Permes Laundry web page, and would like to subscribe for a service";
-
-  return (
+    "Hello, i just visited Permes Laundry web page, and would like to request for a service";
+  useEffect(() => {
+    const userID = localStorage.getItem("userID");
+    if (userID) {
+      setUserId(userID);
+    }
+  }, [1]);
+  return userId == "" ? (
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
       <Element name="howthisworks" className="w-full">
         <div
@@ -200,6 +206,8 @@ const page = () => {
         </a>
       </div>
     </div>
+  ) : (
+    redirect(`/referral/${userId}`)
   );
 };
 

@@ -22,7 +22,7 @@ const Page = () => {
     return userId == ""
       ? redirect(`/landingPage`)
       : redirect(`/referral/${userId}`);
-  }, 500);
+  }, 100);
 };
 
 export default Page;
