@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../../public/logo.jpeg";
 import { log } from "console";
 import Spinner from "@/app/utils/spinner";
@@ -12,6 +12,7 @@ import { signUser } from "@/app/global/slice";
 
 const Signup = () => {
   const [check, setCheck] = useState(false);
+  const [userId, setUserId]: any = useState("");
   const dispatch = useDispatch();
   const submited = async (formData: FormData) => {
     setCheck(true);
@@ -38,10 +39,17 @@ const Signup = () => {
       });
     }, 2000);
   };
+  useEffect(() => {
+    const userID = localStorage.getItem("userID");
+    if (userID) {
+      setUserId(userID);
+    }
+  }, [1]);
+  console.log(userId);
 
   // dispatch(increase(false));
 
-  return (
+  return userId == "" ? (
     <div>
       <div className="flex justify-center items-center w-full h-[100vh] ">
         <div className="border flex flex-col gap-4 border-neutral-500 p-3 rounded-md w-[300px] md:min-w-[300px] min-h-[200px] ">
@@ -79,6 +87,8 @@ const Signup = () => {
         </div>
       </div>
     </div>
+  ) : (
+    redirect(`/referral/${userId}`)
   );
 };
 
