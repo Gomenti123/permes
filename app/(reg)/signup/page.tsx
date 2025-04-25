@@ -28,9 +28,12 @@ const Signup = () => {
       //   console.log(res);
       // });
       await axios.post(url, { name, username }).then((res: any) => {
-        const userId = res.data.data._id;
+        const userId = res.data?.data?._id;
         setCheck(false);
+        // console.log(typeof userId);
+
         dispatch(signUser(res.data.data));
+        localStorage.setItem("userID", userId);
         redirect(`/referral/${userId}`);
       });
     }, 2000);

@@ -12,10 +12,13 @@ import { GrSchedule } from "react-icons/gr";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import Footer from "@/app/(static)/Footer";
 import { Element } from "react-scroll";
+import { useSelector } from "react-redux";
+import { redirect } from "next/navigation";
 
 const page = () => {
   const text =
     "Hello, i just visited Permes Laundry web page, and would like to subscribe for a service";
+
   return (
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
       <Element name="howthisworks" className="w-full">
