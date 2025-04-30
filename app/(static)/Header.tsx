@@ -31,7 +31,7 @@ const Header = () => {
               How This Works
             </Link>
             <Link
-              to="howthisworks"
+              to="about"
               smooth={true}
               duration={700}
               className="cursor-pointer font-semibold"

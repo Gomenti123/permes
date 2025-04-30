@@ -30,15 +30,26 @@ const page = () => {
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
       <Element name="howthisworks" className="w-full">
         <div
-          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[500px] md:h-[500px]`}
+          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[850px] md:h-[500px]`}
         >
           <div className={`bg-[${img2}]`}>
             {/* <Image src={img2} alt="#" width={100} height={100} />
              */}
           </div>
         </div>
-        <div className="bg-[#113972c9] grid grid-cols-1  md:grid-cols-3 px-[10px] md:px-20 md:py-20 py-10  w-full min-h-[350px] md:h-[500px] relative">
-          <div className="col-span-2 w-full md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px] flex flex-col gap-3">
+        <div className="bg-[#966c19a2] px-[10px] md:px-[50px] grid grid-cols-1 md:grid-cols-2 py-10 items-center   w-full min-h-[350px] md:h-[500px] relative">
+          <div className="flex flex-col gap-5 col-span-1">
+            <h1 className="text-white font-semibold text-[30px] md:text-[40px] md:leading-[50px]">
+              The Easiest and Cheapest way to do your laundry and dry cleaning.
+            </h1>
+            <p className="text-white text-[15px] md:text-[18px]">
+              Our mobile apps help connect those who need laundry and dry
+              cleaning services with trusted and vetted industry experts using
+              robust mobile
+            </p>
+          </div>
+
+          {/* <div className="col-span-2 w-full md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px] flex flex-col gap-3">
             <h1 className="font-semibold text-[40px] md:text-[50px] leading-[45px] md:leading-[60px] text-white">
               The Easiest and Cheapest way to do your laundry and dry cleaning.
             </h1>
@@ -47,10 +58,7 @@ const page = () => {
               cleaning services with trusted and vetted industry experts using
               robust mobile technology
             </p>
-          </div>
-          <div className="col-span-1 hidden md:block">
-            <Image src={img} alt="#" width={480} height={400} />
-          </div>
+          </div> */}
         </div>
       </Element>
 
