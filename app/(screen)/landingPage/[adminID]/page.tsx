@@ -2,26 +2,35 @@
 import React, { useEffect, useState } from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { WhatsappShareButton } from "react-share";
-import img from "../../../public/hero.png";
+// import img from "../../../public/hero.png";
 import Image from "next/image";
-import img2 from "../../../public/hero2.png";
-import calendar from "../../../public/calendar.svg";
-import relax from "../../../public/relax.svg";
-import laundry from "../../../public/laundry.svg";
-import { GrSchedule } from "react-icons/gr";
-import { RiCalendarScheduleLine } from "react-icons/ri";
+import img2 from "../../../../public/hero2.png";
+import calendar from "../../../../public/calendar.svg";
+import relax from "../../../../public/relax.svg";
+import laundry from "../../../../public/laundry.svg";
 import Footer from "@/app/(static)/Footer";
 import { Element } from "react-scroll";
 import { useSelector } from "react-redux";
-import { redirect } from "next/navigation";
+import { redirect, useParams } from "next/navigation";
 import { MdStar, MdStarOutline } from "react-icons/md";
+import axios from "axios";
 
 const page = () => {
   const [userId, setUserId]: any = useState("");
-  const text =
-    "Hello, i just visited Permes Laundry web page, and would like to request for a service. Referal Id: jsjnjks";
+  const { adminID } = useParams();
+  const [userName, setUserName] = useState("");
+  const ID = adminID;
+  const text = `Hello, i just visited Permes Laundry web page, and would like to request for a service. Referal Name: ${userName}`;
+  const getUser = async () => {
+    const url = `http://localhost:3000/api/user/680b8adc73ec502388f0a8ae`;
+    await axios.get(url).then((res: any) => {
+      console.log(res.data?.data?.username);
+      setUserName(res.data?.data?.username);
+    });
+  };
   useEffect(() => {
     const userID = localStorage.getItem("userID");
+    getUser();
     if (userID) {
       setUserId(userID);
     }
