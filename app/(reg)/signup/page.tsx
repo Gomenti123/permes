@@ -39,6 +39,7 @@ const Signup = () => {
       });
     }, 2000);
   };
+
   useEffect(() => {
     const userID = localStorage.getItem("userID");
     if (userID) {

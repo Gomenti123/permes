@@ -14,6 +14,7 @@ import Footer from "@/app/(static)/Footer";
 import { Element } from "react-scroll";
 import { useSelector } from "react-redux";
 import { redirect } from "next/navigation";
+import { MdStar, MdStarOutline } from "react-icons/md";
 
 const page = () => {
   const [userId, setUserId]: any = useState("");
@@ -29,15 +30,15 @@ const page = () => {
     <div className="md:mt-[80px] mt-[70px]  h-[200vh] flex flex-col items-center">
       <Element name="howthisworks" className="w-full">
         <div
-          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[350px] md:h-[500px]`}
+          className={`bg-[url("../public/hero2.png")] absolute bg-cover bg-no-repeat w-full min-h-[500px] md:h-[500px]`}
         >
           <div className={`bg-[${img2}]`}>
             {/* <Image src={img2} alt="#" width={100} height={100} />
              */}
           </div>
         </div>
-        <div className="bg-[#113972c9] grid grid-cols-3 px-[10px] md:px-20 md:py-20 w-full min-h-[350px] md:h-[500px] relative">
-          <div className="col-span-2 md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px] flex flex-col gap-3">
+        <div className="bg-[#113972c9] grid grid-cols-1  md:grid-cols-3 px-[10px] md:px-20 md:py-20 py-10  w-full min-h-[350px] md:h-[500px] relative">
+          <div className="col-span-2 w-full md:col-span-1 pt-[20px] md:pt-0 md:mt-[70px] flex flex-col gap-3">
             <h1 className="font-semibold text-[40px] md:text-[50px] leading-[45px] md:leading-[60px] text-white">
               The Easiest and Cheapest way to do your laundry and dry cleaning.
             </h1>
@@ -126,15 +127,23 @@ const page = () => {
               <div className="flex items-center gap-3">
                 <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
                 <div>
-                  <p>This is the text field</p>
-                  <p>this is the small text field</p>
+                  <p className="text-[17px]">This is the text field</p>
+                  <p className="text-white text-[14px]">
+                    this is the small text field
+                  </p>
                 </div>
               </div>
-              <div>This is the star</div>
+              <div className="flex items-center text-[17px] text-yellow-700">
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+              </div>
             </div>
           </div>
           <div className="col-span-1 bg-[#9bdde1] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
-            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-neutral-800">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
               think I'll be canceling anytime soon. I'm dependent on it like a
@@ -144,15 +153,23 @@ const page = () => {
               <div className="flex items-center gap-3">
                 <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
                 <div>
-                  <p>This is the text field</p>
-                  <p>this is the small text field</p>
+                  <p className="text-[17px]">This is the text field</p>
+                  <p className="text-white text-[14px]">
+                    this is the small text field
+                  </p>
                 </div>
               </div>
-              <div>This is the star</div>
+              <div className="flex items-center text-[17px] text-yellow-700">
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+              </div>
             </div>
           </div>
           <div className="col-span-1 bg-[#FECF69] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
-            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-neutral-800">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
               think I'll be canceling anytime soon. I'm dependent on it like a
@@ -162,15 +179,23 @@ const page = () => {
               <div className="flex items-center gap-3">
                 <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
                 <div>
-                  <p>This is the text field</p>
-                  <p>this is the small text field</p>
+                  <p className="text-[17px]">This is the text field</p>
+                  <p className="text-neutral-600 text-[14px]">
+                    this is the small text field
+                  </p>
                 </div>
               </div>
-              <div>This is the star</div>
+              <div className="flex items-center  text-[17px] text-yellow-700">
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStarOutline />
+              </div>
             </div>
           </div>
           <div className="col-span-1 bg-[#f5a504] w-full md:w-[500px] h-[230px] md:h-[250px] rounded-md p-[10px] md:p-6 grid grid-rows-3 md:grid-rows-4">
-            <p className="row-span-2 md:row-span-3 text-[16px] font-light text-white">
+            <p className="row-span-2 md:row-span-3 text-[16px] text-neutral-800 font-light ">
               This has been exactly 5 years, and although my initial motivation
               for subscribing was to see if the service was worthwhile, I don't
               think I'll be canceling anytime soon. I'm dependent on it like a
@@ -180,17 +205,23 @@ const page = () => {
               <div className="flex items-center gap-3">
                 <p className="bg-red-50 rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px]"></p>
                 <div>
-                  <p>This is the text field</p>
-                  <p>this is the small text field</p>
+                  <p className="text-[17px]">This is the text field</p>
+                  <p className="text-[14px]">this is the small text field</p>
                 </div>
               </div>
-              <div>This is the star</div>
+              <div className="flex items-center text-[17px] text-yellow-700">
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+                <MdStar />
+              </div>
             </div>
           </div>
         </div>
       </Element>
 
-      <div>
+      <div className="w-full pt-20">
         <Footer />
       </div>
 
