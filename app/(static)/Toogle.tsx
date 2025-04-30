@@ -23,7 +23,7 @@ const Toogle = () => {
           onClick={() => {
             dispatch(toggle(false));
           }}
-          to="aboutus"
+          to="about"
           smooth={true}
           duration={700}
           className="cursor-pointer font-semibold bg-amber-500 p-2 w-full text-white rounded-md text-center"
